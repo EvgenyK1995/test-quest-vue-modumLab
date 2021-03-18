@@ -3,6 +3,7 @@ import vuex from 'vuex';
 import mutations from './mutations';
 import getters from "./getters";
 import actions from "./actions";
+import createPersistedState from "vuex-persistedstate";
 
 vue.use(vuex);
 
@@ -15,7 +16,8 @@ const store = new vuex.Store({
   },
   getters,
   mutations,
-  actions
+  actions,
+  plugins: [createPersistedState()]
 });
 
 export default store;

@@ -12,9 +12,6 @@
   export default {
     name: "App",
     components: {BookList, CategoriesCloud},
-    created() {
-
-    },
     mounted() {
       this.$store.dispatch('getCategories').then(() => {
         this.$store.dispatch('getBooks');
